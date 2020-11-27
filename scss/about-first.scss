@@ -1,0 +1,107 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+.about-first {
+    padding: 125px 0 106px 0;
+
+    &__title {
+        text-align: center;
+        max-width: 739px;
+        margin: 0 auto;
+    }
+
+    &__descr {
+        text-align: center;
+        max-width: 730px;
+        margin: 55px auto 20px auto;
+    }
+
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        margin-top: 55px;
+    }
+
+    .card-block {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(313px, 1fr));
+        grid-gap: 30px;
+        justify-items: center;
+
+        &__item {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        &__svg-wrapper {
+            .first-wrapper-svg {
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                border: 1px solid #E0E0E0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .second-wrapper-svg {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                border: 1px solid $main-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon {
+                    fill: $main-color;
+                    height: 37.67px;
+                    width: 40px;
+                }
+            }
+        }
+
+        .text-wrapper {
+            margin-left: 17px;
+
+            &__title {
+                font-family: 'Montserrat';
+                font-weight: 600;
+                font-size: 18px;
+                color: #000000;
+                font-size: 18px;
+            }
+
+            &__descr {
+                font-family: 'Montserrat';
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 22px;
+                color: #999999;
+                margin-top: 15px;
+                max-width: 222px;
+            }
+        }
+    }
+}
+
+.my-element {
+    background-image: url(../images/list.svg);
+}
+
+@media all and (max-width: 768px) {
+    .about-first {
+        padding: 50px 0 100px 0;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .card-block {
+        grid-template-columns: 280px !important;
+
+    }
+}

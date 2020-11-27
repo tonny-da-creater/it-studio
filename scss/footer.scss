@@ -1,0 +1,75 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+
+.footer {
+    background: #F6F6F8;
+    padding-top: 70px;
+        
+    &__title {
+        font-size: 18px !important;
+    }
+    
+    .contacts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        border-bottom: 1px solid #E0E0E0;
+        padding-bottom: 65px;
+        
+        &__descr {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            
+            &:first-child {
+                margin-top: 0;
+            }
+            
+            .mail {
+                width: 15px;
+                height: 11.42px;
+            }
+            
+            .phone {
+                width: 15px;
+                height: 15px;
+            }
+            
+            .check {
+                height: 10.99px;
+                width: 15px;
+            }
+            
+            span {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+        }
+    }
+    
+    &__bottom {
+        text-align: center;
+        padding: 30px 0;
+        
+        .rights {
+            font-size: 13px;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .contacts {
+        grid-template-columns: 1fr !important;
+        justify-items: flex-start;
+        grid-row-gap: 50px;
+        &__item {
+            &:nth-child(2), &:nth-child(3) {
+                display: none;
+            }
+            
+        }
+    }
+}
+

@@ -1,0 +1,64 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+
+.video-block {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('../images/video-banner.jpg') no-repeat center/cover;
+    text-align: center;
+    padding: 65px 0 410px 0;
+    position: relative;
+
+    &__title {
+        color: white;
+    }
+
+    &__descr {
+        color: white !important;
+    }
+}
+
+.plyr {
+    position: absolute !important;
+    height: 430px !important;
+    bottom: -20%;
+    width: 970px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plyr__control--overlaid {
+    background-color: white !important;
+}
+
+.plyr__control svg {
+    fill: $main-color !important;
+}
+
+.plyr__poster {
+    background-size: cover !important;
+}
+
+
+@media all and (max-width: 1024px) {
+    .plyr {
+        max-width: 970px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .video-block {
+        padding: 50px 0 225px 0 !important;
+    }
+
+    .plyr {
+        height: 250px !important;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .video-block {
+        padding: 50px 0 400px 0;
+
+    }
+}

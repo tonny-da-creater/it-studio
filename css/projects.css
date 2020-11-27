@@ -1,0 +1,9 @@
+.projects { background: #F6F6F8; text-align: center; padding: 105px 0 130px 0; }
+
+.projects__title { margin-bottom: 35px; }
+
+.projects__descr { max-width: 730px; margin: 0 auto; }
+
+.projects .projects-wrapper { display: -ms-grid; display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); justify-items: center; grid-gap: 30px; padding: 60px 0; }
+
+.projects .projects-wrapper img { border-radius: 10px; background: #C4C4C4; }
